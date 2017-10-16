@@ -13,6 +13,7 @@
 		BD9B74321F953A2E00EC6CF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9B74311F953A2E00EC6CF5 /* Assets.xcassets */; };
 		BD9B74351F953A2E00EC6CF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9B74331F953A2E00EC6CF5 /* LaunchScreen.storyboard */; };
 		BD9B74401F953A2E00EC6CF5 /* Fruit_TestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B743F1F953A2E00EC6CF5 /* Fruit_TestsTests.swift */; };
+		BD9B744C1F953A9100EC6CF5 /* fruits.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD9B744B1F953A8C00EC6CF5 /* fruits.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		BD9B743B1F953A2E00EC6CF5 /* Fruit TestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fruit TestsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9B743F1F953A2E00EC6CF5 /* Fruit_TestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit_TestsTests.swift; sourceTree = "<group>"; };
 		BD9B74411F953A2E00EC6CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD9B744A1F953A7800EC6CF5 /* fruits.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fruits.plist; sourceTree = "<group>"; };
+		BD9B744B1F953A8C00EC6CF5 /* fruits.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fruits.plist; path = "Fruit Tests/fruits.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 				BD9B74311F953A2E00EC6CF5 /* Assets.xcassets */,
 				BD9B74331F953A2E00EC6CF5 /* LaunchScreen.storyboard */,
 				BD9B74361F953A2E00EC6CF5 /* Info.plist */,
+				BD9B744A1F953A7800EC6CF5 /* fruits.plist */,
 			);
 			path = "Fruit Tests";
 			sourceTree = "<group>";
@@ -92,6 +96,7 @@
 			children = (
 				BD9B743F1F953A2E00EC6CF5 /* Fruit_TestsTests.swift */,
 				BD9B74411F953A2E00EC6CF5 /* Info.plist */,
+				BD9B744B1F953A8C00EC6CF5 /* fruits.plist */,
 			);
 			path = "Fruit TestsTests";
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9B744C1F953A9100EC6CF5 /* fruits.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
