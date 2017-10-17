@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Fruits: NSObject {
+struct Fruits {
 	var name: String
 	var group: String
 	
@@ -21,4 +21,9 @@ class Fruits: NSObject {
 		self.name = name
 		self.group = group
 	}
+
+    init(name: String, group: String) {
+        self.name = name
+        self.group = group
+    }
 }
