@@ -38,13 +38,17 @@ class FruitsManager: NSObject {
         return Utils.sort(list: Array(Set(groups)))
     }
 
-    static func filter(fruits: [Fruits], byGroup group: String) -> [String] {
-        if group == "All" {
+    static func filter(fruits: [Fruits], byGroup group: String? = nil) -> [String] {
+        guard let group = group else {
             return self.loadNames(from: fruits)
         }
 
         return self.loadNames(from: fruits.filter() {
             return $0.group == group
         })
+    }
+
+    static func returnNormalizedGroups(_ groups: [String], at position: Int) -> String? {
+        return (position == 0) ? nil : groups[position - 1]
     }
 }

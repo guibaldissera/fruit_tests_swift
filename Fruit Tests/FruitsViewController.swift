@@ -17,9 +17,7 @@ class FruitsViewController: UIViewController {
 	@IBOutlet weak var groupPicker: UIPickerView!
 	@IBOutlet weak var fruitsTable: UITableView!
 
-    func pickerGroupOf(row: Int) -> String {
-        return (row == 0) ? "All" : self.fruitsGroups[row - 1]
-    }
+
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,11 +61,16 @@ extension FruitsViewController: UIPickerViewDataSource {
 extension FruitsViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.pickerGroupOf(row: row)
+        guard let name = FruitsManager.returnNormalizedGroups(self.fruitsGroups, at: row) else {
+            return "All"
+        }
+
+        return name
+
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.fruitsNames = FruitsManager.filter(fruits: self.fruits, byGroup: self.pickerGroupOf(row: row))
+        self.fruitsNames = FruitsManager.filter(fruits: self.fruits, byGroup: FruitsManager.returnNormalizedGroups(self.fruitsGroups, at: row))
         self.fruitsTable.reloadData()
     }
 }
