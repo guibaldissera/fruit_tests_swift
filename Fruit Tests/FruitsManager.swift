@@ -10,14 +10,14 @@ import UIKit
 
 class FruitsManager: NSObject {
 	
-	static func loadFruits(inBundle bundle: Bundle) -> [Fruits] {
+	static func loadFruits(inBundle bundle: Bundle) -> [Fruit] {
 		
-		var fruits = [Fruits]()
+		var fruits = [Fruit]()
 		
 		if let fruitsFile = bundle.path(forResource: "fruits", ofType: "plist"), let fruitsDictionary = NSArray(contentsOfFile: fruitsFile) as? [[String: String]]{
 			
 			for element in fruitsDictionary {
-				if let fruit = Fruits(fromDictionary: element) {
+				if let fruit = Fruit(fromDictionary: element) {
 					fruits.append(fruit)
 				}
 			}
@@ -26,19 +26,19 @@ class FruitsManager: NSObject {
 		return fruits
 	}
 
-    static func loadGroups(from list: [Fruits]) -> [String] {
+    static func loadGroups(from list: [Fruit]) -> [String] {
         let groups = list.map() { $0.group }
 
         return Utils.sort(list: Array(Set(groups)))
     }
 
-    static func loadNames(from list: [Fruits]) -> [String] {
+    static func loadNames(from list: [Fruit]) -> [String] {
         let groups = list.map() { $0.name }
 
         return Utils.sort(list: Array(Set(groups)))
     }
 
-    static func filter(fruits: [Fruits], byGroup group: String? = nil) -> [String] {
+    static func filter(fruits: [Fruit], byGroup group: String? = nil) -> [String] {
         guard let group = group else {
             return self.loadNames(from: fruits)
         }

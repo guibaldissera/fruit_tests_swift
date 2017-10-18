@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Fruits {
+struct Fruit {
 	var name: String
 	var group: String
 	

@@ -10,7 +10,7 @@ import UIKit
 
 class FruitsViewController: UIViewController {
 
-	var fruits = [Fruits]()
+	var fruits = [Fruit]()
     var fruitsNames = [String]()
     var fruitsGroups = [String]()
 	

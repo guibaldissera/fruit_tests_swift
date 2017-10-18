@@ -10,21 +10,21 @@ import XCTest
 @testable import Fruit_Tests
 
 class FruitsManagerTest: XCTestCase {
-    var fruits = [Fruits]()
+    var fruits = [Fruit]()
     
     override func setUp() {
         super.setUp()
 
-        fruits.append(Fruits(name: "banana", group: "amarela"))
-        fruits.append(Fruits(name: "abacaxi", group: "amarela"))
-        fruits.append(Fruits(name: "tomate", group: "vermelha"))
-        fruits.append(Fruits(name: "kiwi", group: "verde"))
+        fruits.append(Fruit(name: "banana", group: "amarela"))
+        fruits.append(Fruit(name: "abacaxi", group: "amarela"))
+        fruits.append(Fruit(name: "tomate", group: "vermelha"))
+        fruits.append(Fruit(name: "kiwi", group: "verde"))
 
     }
     
     override func tearDown() {
         super.tearDown()
-        fruits = [Fruits]()
+        fruits = [Fruit]()
     }
 
     func testLoadGroups() {

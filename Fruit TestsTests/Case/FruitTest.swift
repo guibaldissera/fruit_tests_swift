@@ -9,7 +9,7 @@
 import XCTest
 @testable import Fruit_Tests
 
-class FruitsTest: XCTestCase {
+class FruitTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -27,7 +27,7 @@ class FruitsTest: XCTestCase {
             "group": "Verde",
         ]
 
-        let fruit = Fruits(fromDictionary: fruitDictionary)
+        let fruit = Fruit(fromDictionary: fruitDictionary)
 
         XCTAssertNotNil(fruit)
     }
@@ -38,7 +38,7 @@ class FruitsTest: XCTestCase {
             "group": "Verde",
         ]
 
-        let fruit = Fruits(fromDictionary: fruitDictionary)
+        let fruit = Fruit(fromDictionary: fruitDictionary)
 
         XCTAssertNil(fruit)
     }
