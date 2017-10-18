@@ -17,8 +17,6 @@ class FruitsViewController: UIViewController {
 	@IBOutlet weak var groupPicker: UIPickerView!
 	@IBOutlet weak var fruitsTable: UITableView!
 
-
-
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.fruits = FruitsManager.loadFruits(inBundle: Bundle.main)

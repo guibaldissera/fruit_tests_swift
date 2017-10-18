@@ -19,10 +19,19 @@
 		E81556ED1F9670B6003A1C60 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81556EC1F9670B6003A1C60 /* Utils.swift */; };
 		E81556F41F967993003A1C60 /* fruits.plist in Resources */ = {isa = PBXBuildFile; fileRef = E81556F31F96796C003A1C60 /* fruits.plist */; };
 		E81556F71F967A0A003A1C60 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81556F61F967A0A003A1C60 /* UtilsTest.swift */; };
+		E8D7CEC71F97B9BC00073B43 /* FruitsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7CEC61F97B9BC00073B43 /* FruitsViewControllerTest.swift */; };
+		E8D7CECC1F97C97700073B43 /* FruitsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7CECB1F97C97700073B43 /* FruitsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		BD9B743C1F953A2E00EC6CF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD9B741F1F953A2E00EC6CF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD9B74261F953A2E00EC6CF5;
+			remoteInfo = "Fruit Tests";
+		};
+		E8D7CEBC1F97B7D000073B43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD9B741F1F953A2E00EC6CF5 /* Project object */;
 			proxyType = 1;
@@ -48,6 +57,10 @@
 		E81556EC1F9670B6003A1C60 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E81556F31F96796C003A1C60 /* fruits.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fruits.plist; path = "Fruit Tests/Resources/fruits.plist"; sourceTree = SOURCE_ROOT; };
 		E81556F61F967A0A003A1C60 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
+		E8D7CEB71F97B7CF00073B43 /* Fruit Integration Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fruit Integration Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D7CEBB1F97B7D000073B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D7CEC61F97B9BC00073B43 /* FruitsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsViewControllerTest.swift; sourceTree = "<group>"; };
+		E8D7CECB1F97C97700073B43 /* FruitsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8D7CEB41F97B7CF00073B43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +93,7 @@
 			children = (
 				BD9B74291F953A2E00EC6CF5 /* Fruit Tests */,
 				BD9B743E1F953A2E00EC6CF5 /* Fruit TestsTests */,
+				E8D7CEB81F97B7D000073B43 /* Fruit Integration Test */,
 				BD9B74281F953A2E00EC6CF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +103,7 @@
 			children = (
 				BD9B74271F953A2E00EC6CF5 /* Fruit Tests.app */,
 				BD9B743B1F953A2E00EC6CF5 /* Fruit TestsTests.xctest */,
+				E8D7CEB71F97B7CF00073B43 /* Fruit Integration Test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +125,9 @@
 		BD9B743E1F953A2E00EC6CF5 /* Fruit TestsTests */ = {
 			isa = PBXGroup;
 			children = (
-				E81556F51F9679B6003A1C60 /* Supporting Files */,
-				BD9B744E1F953C0C00EC6CF5 /* Data */,
 				BD9B744D1F953C0000EC6CF5 /* Case */,
+				BD9B744E1F953C0C00EC6CF5 /* Data */,
+				E81556F51F9679B6003A1C60 /* Supporting Files */,
 			);
 			path = "Fruit TestsTests";
 			sourceTree = "<group>";
@@ -115,6 +137,7 @@
 			children = (
 				BD9B743F1F953A2E00EC6CF5 /* FruitsManagerTest.swift */,
 				E81556F61F967A0A003A1C60 /* UtilsTest.swift */,
+				E8D7CECB1F97C97700073B43 /* FruitsTest.swift */,
 			);
 			path = Case;
 			sourceTree = "<group>";
@@ -150,6 +173,39 @@
 			isa = PBXGroup;
 			children = (
 				BD9B74411F953A2E00EC6CF5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8D7CEB81F97B7D000073B43 /* Fruit Integration Test */ = {
+			isa = PBXGroup;
+			children = (
+				E8D7CEC21F97B7FC00073B43 /* Case */,
+				E8D7CEC11F97B7F300073B43 /* Data */,
+				E8D7CEC31F97B80100073B43 /* Supporting Files */,
+			);
+			path = "Fruit Integration Test";
+			sourceTree = "<group>";
+		};
+		E8D7CEC11F97B7F300073B43 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E8D7CEC21F97B7FC00073B43 /* Case */ = {
+			isa = PBXGroup;
+			children = (
+				E8D7CEC61F97B9BC00073B43 /* FruitsViewControllerTest.swift */,
+			);
+			path = Case;
+			sourceTree = "<group>";
+		};
+		E8D7CEC31F97B80100073B43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8D7CEBB1F97B7D000073B43 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +248,24 @@
 			productReference = BD9B743B1F953A2E00EC6CF5 /* Fruit TestsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E8D7CEB61F97B7CF00073B43 /* Fruit Integration Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8D7CEC01F97B7D000073B43 /* Build configuration list for PBXNativeTarget "Fruit Integration Test" */;
+			buildPhases = (
+				E8D7CEB31F97B7CF00073B43 /* Sources */,
+				E8D7CEB41F97B7CF00073B43 /* Frameworks */,
+				E8D7CEB51F97B7CF00073B43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8D7CEBD1F97B7D000073B43 /* PBXTargetDependency */,
+			);
+			name = "Fruit Integration Test";
+			productName = "Fruit Integration Test";
+			productReference = E8D7CEB71F97B7CF00073B43 /* Fruit Integration Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +282,12 @@
 					};
 					BD9B743A1F953A2E00EC6CF5 = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BD9B74261F953A2E00EC6CF5;
+					};
+					E8D7CEB61F97B7CF00073B43 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BD9B74261F953A2E00EC6CF5;
 					};
@@ -228,6 +308,7 @@
 			targets = (
 				BD9B74261F953A2E00EC6CF5 /* Fruit Tests */,
 				BD9B743A1F953A2E00EC6CF5 /* Fruit TestsTests */,
+				E8D7CEB61F97B7CF00073B43 /* Fruit Integration Test */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +333,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8D7CEB51F97B7CF00073B43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,6 +361,15 @@
 			files = (
 				BD9B74401F953A2E00EC6CF5 /* FruitsManagerTest.swift in Sources */,
 				E81556F71F967A0A003A1C60 /* UtilsTest.swift in Sources */,
+				E8D7CECC1F97C97700073B43 /* FruitsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8D7CEB31F97B7CF00073B43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D7CEC71F97B9BC00073B43 /* FruitsViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +380,11 @@
 			isa = PBXTargetDependency;
 			target = BD9B74261F953A2E00EC6CF5 /* Fruit Tests */;
 			targetProxy = BD9B743C1F953A2E00EC6CF5 /* PBXContainerItemProxy */;
+		};
+		E8D7CEBD1F97B7D000073B43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD9B74261F953A2E00EC6CF5 /* Fruit Tests */;
+			targetProxy = E8D7CEBC1F97B7D000073B43 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -449,7 +551,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G4B9J3MGEV;
+				DEVELOPMENT_TEAM = 248SB9J68G;
 				INFOPLIST_FILE = "Fruit TestsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bepiducb.baldissera.Fruit-TestsTests";
@@ -466,10 +568,45 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G4B9J3MGEV;
+				DEVELOPMENT_TEAM = 248SB9J68G;
 				INFOPLIST_FILE = "Fruit TestsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bepiducb.baldissera.Fruit-TestsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fruit Tests.app/Fruit Tests";
+			};
+			name = Release;
+		};
+		E8D7CEBE1F97B7D000073B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 248SB9J68G;
+				INFOPLIST_FILE = "Fruit Integration Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.vital-edu.Fruit-Integration-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fruit Tests.app/Fruit Tests";
+			};
+			name = Debug;
+		};
+		E8D7CEBF1F97B7D000073B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 248SB9J68G;
+				INFOPLIST_FILE = "Fruit Integration Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.vital-edu.Fruit-Integration-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,6 +640,15 @@
 			buildConfigurations = (
 				BD9B74481F953A2E00EC6CF5 /* Debug */,
 				BD9B74491F953A2E00EC6CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8D7CEC01F97B7D000073B43 /* Build configuration list for PBXNativeTarget "Fruit Integration Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8D7CEBE1F97B7D000073B43 /* Debug */,
+				E8D7CEBF1F97B7D000073B43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
