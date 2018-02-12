@@ -22,6 +22,9 @@ class FruitsViewController: UIViewController {
 		self.fruits = FruitsManager.loadFruits(inBundle: Bundle.main)
         self.fruitsNames = FruitsManager.loadNames(from: self.fruits)
         self.fruitsGroups = FruitsManager.loadGroups(from: self.fruits)
+
+        self.groupPicker.accessibilityActivate()
+//        self.groupPicker.accessibilityTraits = accessibilityTrait
     }
 }
 
@@ -64,7 +67,6 @@ extension FruitsViewController: UIPickerViewDelegate {
         }
 
         return name
-
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -72,4 +74,22 @@ extension FruitsViewController: UIPickerViewDelegate {
         self.fruitsTable.reloadData()
     }
 }
+extension FruitsViewController: UIPickerViewAccessibilityDelegate {
 
+    func pickerView(_ pickerView: UIPickerView, accessibilityLabelForComponent component: Int) -> String? {
+        guard let name = FruitsManager.returnNormalizedGroups(self.fruitsGroups, at: component) else {
+            return "All"
+        }
+
+        return name
+    }
+
+
+    func pickerView(_ pickerView: UIPickerView, accessibilityHintForComponent component: Int) -> String? {
+        guard let name = FruitsManager.returnNormalizedGroups(self.fruitsGroups, at: component) else {
+            return "All"
+        }
+
+        return name
+    }
+}
